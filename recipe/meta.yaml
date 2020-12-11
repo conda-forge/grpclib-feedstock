@@ -13,6 +13,7 @@ source:
 build:
   number: 1
   skip: true   # [py2k]
+  noarch: python
   entry_points:
     - protoc-gen-python_grpc=grpclib.plugin.main:main
     - protoc-gen-grpclib_python=grpclib.plugin.main:main
@@ -21,7 +22,7 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >= 3.6
   run:
     - dataclasses  # [py<37]
     - h2 <5,>=3.1.0
