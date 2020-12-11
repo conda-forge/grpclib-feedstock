@@ -21,7 +21,7 @@ build:
 requirements:
   host:
     - pip
-    - python>=3.6
+    - python >=3.6
   run:
     - dataclasses
     - h2 <5,>=3.1.0
