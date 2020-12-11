@@ -11,7 +11,7 @@ source:
   sha256: 8c0021cd038634c268249e4cd168d9f3570e66ceceec1c9416094b788ebc8372
 
 build:
-  number: 0
+  number: 1
   skip: true   # [py2k]
   entry_points:
     - protoc-gen-python_grpc=grpclib.plugin.main:main
