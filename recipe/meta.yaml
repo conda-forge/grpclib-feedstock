@@ -1,5 +1,5 @@
 {% set name = "grpclib" %}
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/grpclib-{{ version }}.tar.gz
-  sha256: 8c0021cd038634c268249e4cd168d9f3570e66ceceec1c9416094b788ebc8372
+  sha256: ead080cb7d56d6a5e835aaf5255d1ef1dce475a7722566ea225f0188fce33b68
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - protoc-gen-python_grpc=grpclib.plugin.main:main
@@ -23,11 +23,10 @@ requirements:
     - pip
     - python >=3.6
   run:
+    - python >=3.6
     - dataclasses
     - h2 <5,>=3.1.0
     - multidict
-    - python
-
 test:
   imports:
     - grpclib
