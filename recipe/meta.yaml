@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/grpclib-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/grpclib-{{ version }}.tar.gz
   sha256: 2988ef57c02b22b7a2e8e961792c41ccf97efc2ace91ae7a5b0de03c363823c3
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - protoc-gen-python_grpc=grpclib.plugin.main:main
@@ -21,9 +21,9 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - dataclasses
     - h2 <5,>=3.1.0
     - multidict
@@ -35,6 +35,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/vmagamedov/grpclib
