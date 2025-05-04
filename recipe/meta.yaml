@@ -1,5 +1,5 @@
 {% set name = "grpclib" %}
-{% set version = "0.4.7" %}
+{% set version = "0.4.8" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/grpclib-{{ version }}.tar.gz
-  sha256: 2988ef57c02b22b7a2e8e961792c41ccf97efc2ace91ae7a5b0de03c363823c3
+  sha256: d8823763780ef94fed8b2c562f7485cf0bbee15fc7d065a640673667f7719c9a
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - protoc-gen-python_grpc=grpclib.plugin.main:main
