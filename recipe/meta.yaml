@@ -1,5 +1,5 @@
 {% set name = "grpclib" %}
-{% set version = "0.4.8" %}
+{% set version = "0.4.9" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/grpclib-{{ version }}.tar.gz
-  sha256: d8823763780ef94fed8b2c562f7485cf0bbee15fc7d065a640673667f7719c9a
+  sha256: cc589c330fa81004c6400a52a566407574498cb5b055fa927013361e21466c46
 
 build:
   number: 0
